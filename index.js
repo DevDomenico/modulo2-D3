@@ -13,6 +13,7 @@ if (numero1 > numero2) {
   console.log("Il numero più grande è:", numero2);
 } 
 
+
 /*
 ESERCIZIO 2
   Crea un blocco condizionale if/else per mostrare in console il messaggio corretto in ogni condizione.
@@ -102,7 +103,21 @@ console.log("Totale: " + totalAmount);
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalCarrello = 100;  // Saldo totale del carrello dell'utente
+let scostoSpedizione = 10; // Costo di spedizione fisso
+let sconto = 0.2;  // Percentuale di sconto (20%)
+
+// Applica lo sconto del 20% su ogni prodotto nel carrello
+let totaleSconto = totalCarrello * sconto;
+totalCarrello= totalCarrello - totaleSconto;
+
+if (totalCarrello > 50) {   // Verifica se l'utente ha diritto alla spedizione gratuita
+    costoSpedizione = 0;   // Spedizione gratuita
+}
+
+let totalAmmontare= totalCarrello + costoSpedizione;  // Calcolo dell'ammontare totale da addebitare all'utente
+console.log("Totale:" + totalAmmontare);
+
 
 /*  ESERCIZIO EXTRA 4
   Usa un operatore ternaio per assegnare ad una variabile chiamata "gender" i valori "male" o "female".
@@ -120,7 +135,9 @@ if (isMale) {
   isMale ? (gender = "male") : (gender = "female")
   console.log(gender)
   
+  //l'operatore ternario ? viene utilizzato per valutare la condizione isMale. Se isMale è true, il valore "male" viene assegnato alla variabile gender, altrimenti viene assegnato il valore "female"
 
 /* ESERCIZIO EXTRA 5
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
+
