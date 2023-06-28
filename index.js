@@ -118,7 +118,6 @@ if (isMale) {
   else  gender = 'female'
 
   isMale ? (gender = "male") : (gender = "female")
-  
   console.log(gender)
   
 
